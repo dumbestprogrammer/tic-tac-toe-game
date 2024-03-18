@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC-TAC-TOE</title>
+    <!-- I added some fonts for google .-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto&display=swap" rel="stylesheet"/>
+
+<!-- I'm adding a link to all my css file-->
+
+<link rel="stylesheet" href="all-CSS-styles/style.css">
+<link rel="stylesheet" href="all-CSS-styles/shared-css-file.css">
+<link rel="stylesheet" href="all-CSS-styles/all-adjustments.css">
+<link rel="stylesheet" href="all-CSS-styles/game-board.css">
+<!-- adding my script files now-->
+<script src="game-JS-files/config_logic.js" defer></script>
+<script src="game-JS-files/game_logic.js" defer></script>
+<!--I'm adding my starter file at last so that once the logic is settled 
+everything just gets in the constants and variables defined in starter files 
+and the game runs without any wait for the configuration or game logic.-->
+<script src="game-JS-files/starter_files.js" defer></script>
+
+<!--also adding defer , so that js files are executed only when the html file is done executing .
+-->
+
+</head>
+<body>
+    <div id="style"></div>
+    <header id="main-header">
+        <h1>Hey, Let's play TIC-TAC-TOE</h1>
+        <p>Try your best to beat your opponent. <br> GOOD LUCK !! 🙌</p>
+    </header>
+    <main>
+        <aside class="modal" id="adjustment-s">
+            <h2>Choose your name </h2>
+            <form>
+                <div class="form-control">
+                    <label for="player-name">Player Name</label>
+                    <input type="text" name="player-name" id="player-name"/>
+                </div>
+                <p id="erro-rs"></p>
+                <div>
+                    <button type="reset" class="btn btn-alt" id="close-button">Cancel</button>
+                    <button type="submit" class="btn">Confirm</button>
+                </div>
+            </form>
+        </aside>
+        <section id="game-config">
+            <ol>
+                <li>
+                <article id="player-1-data">
+                    <h2>Player 1 </h2>
+                    <h3>PLAYER NAME</h3>
+                    <P class="player-symbol">X</P>
+                    <button class="btn btn-alt " id="edit-player1" data-playerid="1">Edit</button>
+                </article>
+            </li>
+            <li>
+                <article id="player-2-data">
+                    <h2>Player 2 </h2>
+                    <h3>PLAYER NAME</h3>
+                    <P class="player-symbol">O</P>
+                    <button class="btn btn-alt" id="edit-player2" data-playerid="2">Edit</button>
+                </article>
+            </li>
+            </ol>
+
+
+            <button class="btn" id="start-game">START GAME</button>
+        </section>
+        <section id="active-game">
+            <article id="game-over">
+                <h2>You Won 🥳 <span id="winner-name">PLAYER NAME</span>!</H2>
+                <p>Click "Start New Game" above , to start a new game !</p>
+            </article>
+            <!-- my actual game field , 9 list items because there's gonna be nine blocks , an Ordered list because order matters-->
+            <p id="turn-text">It's Your TURN 💭 <span id="active-player-name"> PLAYER NAME</span></p>
+            <ol id="game-board">
+                <li data-col="1" data-row="1"></li>
+                <li data-col="2" data-row="1"></li>
+                <li data-col="3" data-row="1"></li>
+                <li data-col="1" data-row="2"></li>
+                <li data-col="2" data-row="2"></li>
+                <li data-col="3" data-row="2"></li>
+                <li data-col="1" data-row="3"></li>
+                <li data-col="2" data-row="3"></li>
+                <li data-col="3" data-row="3"></li>
+                
+            </ol>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,62 @@
+#active-game {
+    text-align: center;
+    margin: 2rem 0 5rem 0;
+    display: none;
+}
+
+#game-over{
+    width: 90%;
+    max-width: 40rem;
+    margin: auto;
+    padding: 1rem 2rem;
+    background-color: rgb(0, 109, 98);
+    color: whitesmoke;
+    box-shadow: 0 2.2px 8px rgba(0,0,0,0.3);
+    display: none;
+}
+
+#game-over h2{
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+
+#active-player-name{
+    font-weight: bolder;
+color: rgb(33, 91, 85);
+}
+
+#turn-text{
+    font-size: large;
+}
+
+#game-board{
+    list-style: none;
+    margin: 1.2rem 0;
+    padding: 0.1rem;
+    display: grid;
+    grid-template-columns: 6rem 6rem 6rem;
+    grid-template-rows: 6rem 6rem 6rem;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#game-board li{
+    background-color: rgb(6, 108, 98);
+    border-radius: 2.5px;
+    cursor: pointer; /*telling the user that tiles are clickable */
+    display: flex; /* turning it into a flex box , so that the items ( symbols X and O ) are always in center when entered*/
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#game-board li:hover{
+    background-color: rgb(10, 79, 75);
+}
+
+#game-board li.disabled{
+    background-color: rgb(10, 79, 75);
+    color: white;
+    cursor: default;
+}
